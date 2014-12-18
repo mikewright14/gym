@@ -1,0 +1,13 @@
+
+<Directory /var/www/myketopal.co.uk/current/public>
+                Options FollowSymLinks
+                AllowOverride All //instead of None
+</Directory>
+
+<IfModule mod_rewrite.c>
+        Options +FollowSymLinks
+        RewriteEngine On
+
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteRule ^ index.php [L] //without public/
+</IfModule>
