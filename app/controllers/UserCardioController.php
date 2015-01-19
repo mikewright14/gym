@@ -28,8 +28,9 @@ class UserCardioController extends \BaseController {
 		$user->cardioCaloriesBurnt = Input::get('cardioCaloriesBurnt');
 	   	$user->save();
 
+	   
 		
-    	return Redirect::to('userStat');
+    	return Redirect::to('user/cardio/');
 	}
 
 
@@ -56,7 +57,15 @@ class UserCardioController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+
+		
+		 $userCardio = User::find($id)->UserCardio;
+
+
+    // show the edit form and pass the userStat
+    return View::make('userCardio.edit')
+        ->with('userCardio', $userCardio);
+		
 	}
 
 
@@ -67,8 +76,19 @@ class UserCardioController extends \BaseController {
 	 * @return Response
 	 */
 	public function update($id)
-	{
-		//
+	{	
+
+
+
+		$userCardio = User::find($id)->UserStat;
+		$userCardio->user_id = Auth::id();
+		$userCardio->cardioType = Input::get('cardioType');
+	    $userCardio->cardioDuration = Input::get('cardioDuration');
+	    $userCardio->cardioLength = Input::get('cardioLength');
+		$userCardio->cardioCaloriesBurnt = Input::get('cardioCaloriesBurnt');
+	   	$userCardio->save();
+
+	    return Redirect::to('users/cardio/');
 	}
 
 

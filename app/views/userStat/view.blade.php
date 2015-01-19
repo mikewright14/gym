@@ -69,7 +69,7 @@
                             <li class="list-group-item"><i class="fa fa-clock-o"></i> Age:  {{ $users['UserStat']['age'] }} </li>
                             <li class="list-group-item"><i class="fa fa-clock-o"></i> Sex:  {{ $users['UserStat']['sex'] }} </li>
                             <li class="list-group-item"><i class="fa fa-users"></i> Activity Level:  {{ $activityLevel }}
-                            <a href="#" class="btn btn-primary btn-xs pull-right">Change</a>
+                             <a href="/user/stats/edit" class="btn btn-primary btn-xs pull-right">Change</a>
                             </li>
                         </ul>
                        
@@ -93,7 +93,7 @@
                             <li class="list-group-item"><i class="fa fa-clock-o"></i> Reps Deadlift:  {{ $users['userWeightlifting']['repDeadliftWeight'] }} x {{ $users['userWeightlifting']['repDeadliftReps'] }} </li>
                             <li class="list-group-item"><i class="fa fa-clock-o"></i> Max Overhead Press:  {{ $users['userWeightlifting']['maxOverheadPressWeight'] }} </li>
                             <li class="list-group-item"><i class="fa fa-users"></i> Reps Overhead Press:  {{ $users['userWeightlifting']['repOverheadPressWeight'] }} x {{ $users['userWeightlifting']['repOverheadPressReps'] }}
-                            <a href="#" class="btn btn-primary btn-xs pull-right">Change</a>
+                             <a href="userWeightlifting/{{ $users['id'] }}/edit" class="btn btn-primary btn-xs pull-right">Change</a>
                             </li>
                         </ul>
                        
@@ -126,7 +126,7 @@
                             <li class="list-group-item"><i class="fa fa-calendar-o"></i>Miles this year:  {{ $users['UserStat']['height'] }} </li>
                             <li class="list-group-item"><i class="fa fa-calendar-o"></i>Most miles in one cardio:  {{ $users['UserStat']['height'] }} </li>
                             <li class="list-group-item"><i class="fa fa-clock-o"></i> Total calories burnt from running:  {{ $caloriesBurntTotal }} 
-                            <a href="#" class="btn btn-primary btn-xs pull-right">Change</a>
+                            <a href="userCardio/{{ $users['id'] }}/edit" class="btn btn-primary btn-xs pull-right">Change</a>
                             </li>
                         </ul>
                        

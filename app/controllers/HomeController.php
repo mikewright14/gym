@@ -70,7 +70,6 @@ class HomeController extends BaseController {
 
 
 
-
 			// attempt to do the login
 			if (Auth::attempt($userdata)) {
 

@@ -75,9 +75,17 @@ class UserWeightliftingController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($id)
+		public function edit($id)
 	{
-		return View::make('userWeightlifting.edit');
+
+		
+		 $userWeightlifting = User::find($id)->UserWeightlifting;
+
+
+    // show the edit form and pass the userStat
+    return View::make('userWeightlifting.edit')
+        ->with('userWeightlifting', $userWeightlifting);
+		
 	}
 
 
@@ -88,8 +96,26 @@ class UserWeightliftingController extends \BaseController {
 	 * @return Response
 	 */
 	public function update($id)
-	{
-		//
+	{	
+
+
+ 
+		$userWeightlifting = User::find($id)->UserWeightlifting;
+		
+		$userWeightlifting->user_id = $id = Auth::id();
+	    $userWeightlifting->maxBenchPressWeight = Input::get('maxBenchPressWeight');
+	    $userWeightlifting->repBenchPressWeight = Input::get('repBenchPressWeight');
+	    $userWeightlifting->repBenchPressReps = Input::get('repBenchPressReps');
+		$userWeightlifting->maxSquatWeight = Input::get('maxSquatWeight');
+	    $userWeightlifting->repSquatWeight = Input::get('repSquatWeight');
+	    $userWeightlifting->repSquatReps = Input::get('repSquatReps');
+		$userWeightlifting->maxDeadliftWeight = Input::get('maxDeadliftWeight');
+	    $userWeightlifting->repDeadliftWeight = Input::get('repDeadliftWeight');
+	    $userWeightlifting->repDeadliftReps = Input::get('repDeadliftReps');
+	   
+	    $userWeightlifting->save();
+
+	    return Redirect::to('userStat');
 	}
 
 

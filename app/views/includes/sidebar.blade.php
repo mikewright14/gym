@@ -6,7 +6,8 @@
                 <li class="category">Navigation</li>
                 <li class="hasSubmenu  ">
                     <li class="">
-                    <a href="#"><i class="icon-lock-fill"></i> Food Diary</a>
+                        <?php $date = date("Y-m-d"); ?>
+                    <a href="/user/food/{{$date}}"><i class="icon-lock-fill"></i> Food Diary</a>
                 </li>
                 </li>
                 <li class="">
@@ -26,7 +27,10 @@
                 </li>
                 </li>
                        <li class="">
-                    <a href="/userStat"><i class="fa fa-area-chart"></i> Your Stats</a>
+                    <a href="/user/stats"><i class="fa fa-area-chart"></i> Your Stats</a>
+                </li>
+                <li class="">
+                    <a href="/user/goals"><i class="fa fa-area-chart"></i> Your Goals</a>
                 </li>
              
                 

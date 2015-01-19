@@ -10,8 +10,8 @@
 
 	@include('includes.sidebar')
 
-		 {{ Form::open(array('url' => 'userStat')) }}
-		<h1>Enter stats</h1>
+		 {{ Form::open(array('url' => 'users/stats/create')) }}
+		<h1>Ente1r stats</h1>
 
 		<!-- if there are login errors, show them here -->
 		<p>

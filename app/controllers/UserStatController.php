@@ -54,7 +54,7 @@ class UserStatController extends \BaseController {
 	    $userStat->sex = Input::get('sex');
 	    $userStat->save();
 
-	    // Set variables for the calorie intake calculation]
+	    // Set variables for the calorie intake calculation
 
 	     $height =  $userStat->height;
 	     $weight =  $userStat->weight;
@@ -145,13 +145,13 @@ class UserStatController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($id)
+	public function edit()
 	{
 
-		
+		$id = Auth::id();
 		 $userStat = User::find($id)->UserStat;
 
-
+		
     // show the edit form and pass the userStat
     return View::make('userStat.edit')
         ->with('userStat', $userStat);
@@ -165,20 +165,23 @@ class UserStatController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update()
 	{	
 
 
-
+		$id = Auth::id();
 		$userStat = User::find($id)->UserStat;
-		die(var_dump($userstat));
-		$userStat->user_id = $id = Auth::id();
+		
+		$userStat->user_id = $id;
 	    $userStat->height = Input::get('height');
 	    $userStat->weight = Input::get('weight');
 	    $userStat->activity = Input::get('activity');
 	    $userStat->age = Input::get('age');
 	    $userStat->sex = Input::get('sex');
 	    $userStat->save();
+
+
+	    return Redirect::to('/user/stats/');
 	}
 
 
