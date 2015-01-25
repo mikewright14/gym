@@ -11,12 +11,12 @@ class RecipeController extends \BaseController {
 	{
 
 		$id = Auth::id();
-		$users = Recipe::with('UserRecipe','RecipeVote')->get();
+		$recipes = Recipe::all();
 		
 
 
 		
-		return View::make('recipe.view')->with('users', $users);
+		return View::make('recipe.view')->with('recipes', $recipes);
 	
 	}
 

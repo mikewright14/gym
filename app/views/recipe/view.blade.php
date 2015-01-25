@@ -1,5 +1,3 @@
- 
-
 <!doctype html>
 
 <html>
@@ -10,13 +8,13 @@
 
     <script type="text/javascript">
 
-    function submitform(){
+        function submitform() {
 
-   $('#thumbs-up').click(function(){
-    console.log("hi there");
-    });
+            $('#thumbs-up').click(function () {
+                console.log("hi there");
+            });
 
-    }
+        }
     </script>
 
 </head>
@@ -24,9 +22,6 @@
 <body>
 
 <div class="container">
-
-
-
 
 
     @include('includes.nav')
@@ -37,131 +32,104 @@
 
 
 
-  
 
 
 
-<div class="panel panel-default">
 
-                <div class="panel-heading panel-heading-gray">
+    <div class="panel panel-default">
 
-                   User Goal
+        <div class="panel-heading panel-heading-gray">
 
-                </div>
+            User Goal
+
+        </div>
 
 
+        <!-- Progress table -->
 
-                <!-- Progress table -->
+        <div class="table-responsive">
 
-                <div class="table-responsive">
+            <table class="table v-middle">
 
-                    <table class="table v-middle">
+                <thead>
 
-                        <thead>
+                <tr>
 
-                            <tr>
 
-                           
+                    <th>Date</th>
 
-                                <th>Date</th>
+                    <th>Recipe Name</th>
 
-                                <th>Recipe Name</th>
+                    <th>Recipe User</th>
 
-                                <th>Recipe User</th>
+                    <th>Carbs Per Serving</th>
 
-                                <th>Carbs Per Serving</th>
+                    <th>Cals Per Serving</th>
 
-                                <th>Cals Per Serving</th>
+                    <th>Vote</th>
 
-                                <th>Vote</th>
 
-                               
-                            </tr>
+                </tr>
 
-                        </thead>
+                </thead>
 
-                        <tbody>
+                <tbody>
 
-                           
-                        
-                           <?php 
-                            
-
-                            
-                            foreach ($users as $user){
-                               
-                               $userRep = $user->UserRecipe;
-                               $vote = $user->RecipeVote;
-                               echo "<pre>";
-                               dd($user);
-                               
-                        
-                                foreach ($userRep as $u){
-                                
-                             
-                                
-                          ?>
-                            <tr>
-
-                              
-
-                                <td> <span class="label label-gray">19/09/2014</span>
-
-                                </td>
-
-                                <td>{{$user->recipeName}}</td>
-
-                                <td>{{$u->firstName}} {{$u->lastName}}</td>
-
-                                <td>{{$user->recipeName}}</td>
-
-                                <td>{{$user->recipeName}}</td>
-
-                                <td>
-                    {{$vote->vote}}
-                    <?php if ($vote->recipeVoteID){ ?>
-                        {{ Form::open(array('url' => 'recipe/vote/edit')) }}
-                    <?php }else{ ?>
-                          {{ Form::open(array('url' => 'recipe/vote')) }}
-                   <?php  } ?>
+                @foreach ($recipes as $recipe)
+                    <?php
+                        $user = $recipe->User;
+                        $vote = RecipeVote::where('recipe_id', '=', $recipe->recipeID)->where('user_id', '=', $user->id)->first();
                     ?>
-               
-                 {{ Form::hidden('recipeID', $vote->recipeID) }}
-                <button name ="thumb-up" id = "thumb-up" value="1" class="btn btn-default">
-               <i class="fa fa-thumbs-up fa-3"></i>  
-            </button>
-              <button name ="thumb-down" id = "thumb-down" value"2" class="btn btn-default">
-                <i class="fa fa-thumbs-down fa-3"></i> 
-            </button>
-
-            {{ Form::close() }} 
-            </td>
-
-                                
-                                
-                               
-
-                            </tr>
-
-                            <?php }  }?>
-
-                          
-
-                        </tbody>
-
-                    </table>
-
-                </div>
-
-                 <a href="userGoal/create" class="btn btn-primary btn-xs pull-right">Create Goal</a>
+                    <tr>
 
 
+                        <td><span class="label label-gray">19/09/2014</span>
+
+                        </td>
+
+                        <td>{{$recipe->recipeName}}</td>
+
+                        <td>{{$user->firstName}} {{$user->lastName}}</td>
+
+                        <td>{{$recipe->carbsPerServing}}</td>
+
+                        <td>{{$recipe->calsPerServing}}</td>
+
+                        <td>
+                            @if ($vote)
+                                {{ Form::open(array('url' => 'recipe/vote/edit')) }}
+                            @else
+                                {{ Form::open(array('url' => 'recipe/vote')) }}
+                            @endif
+
+                            {{ Form::hidden('recipeID', $recipe->recipeID) }}
+                            <button name="thumb-up" id="thumb-up" value="1" class="btn btn-default {{ isset($vote->vote) && $vote->vote == 1 ? 'btn-success' : '' }}">
+                                <i class="fa fa-thumbs-up fa-3"></i>
+                            </button>
+                            <button name="thumb-down" id="thumb-down" value=
+                            "2" class="btn btn-default {{ isset($vote->vote) && $vote->vote != 1 ? 'btn-success' : '' }}">
+                                <i class="fa fa-thumbs-down fa-3"></i>
+                            </button>
+
+                            {{ Form::close() }}
+                        </td>
 
 
-            </div>
+                    </tr>
+
+                @endforeach
 
 
+                </tbody>
 
+            </table>
+
+        </div>
+
+        <a href="userGoal/create" class="btn btn-primary btn-xs pull-right">Create Goal</a>
+
+
+    </div>
 
 
     <footer class="row">
@@ -169,7 +137,6 @@
         @include('includes.footer')
 
     </footer>
-
 
 
 </div>
