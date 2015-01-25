@@ -19,12 +19,12 @@ class Recipe extends Eloquent implements UserInterface, RemindableInterface {
     public $timestamps = false;
 
 
-     public function UserRecipe()
+     public function User()
     {
-        return $this->belongsTo('User');
+        return $this->belongsTo('User', 'user_id', 'id');
     }
 
-     public function RecipeVote()
+     public function Vote()
     {
         return $this->hasOne('RecipeVote');
     }
