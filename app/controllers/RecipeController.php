@@ -1,6 +1,6 @@
 <?php
 
-class UserGoalController extends \BaseController {
+class RecipeController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -11,13 +11,12 @@ class UserGoalController extends \BaseController {
 	{
 
 		$id = Auth::id();
-		$users = User::with('UserStat', 'UserGoal')->find($id);
+		$users = Recipe::with('UserRecipe','RecipeVote')->get();
 		
 
 
-
 		
-		return View::make('userGoal.view')->with('users', $users);
+		return View::make('recipe.view')->with('users', $users);
 	
 	}
 
@@ -29,7 +28,7 @@ class UserGoalController extends \BaseController {
 	 */
 	public function create()
 	{
-		return View::make('userGoal.create');
+		return View::make('recipe.create');
 	}
 
 
@@ -39,17 +38,40 @@ class UserGoalController extends \BaseController {
 	 * @return Response
 	 */
 	public function store()
-	{
-		$userGoal = new UserGoal;
-		$userGoal->user_id = $id = Auth::id();
-	    $userGoal->goalName = Input::get('goalName');
-	    $userGoal->goalType = Input::get('goalType');
-	    $userGoal->startingValue = Input::get('startingValue');
-	    $userGoal->endingValue = Input::get('endingValue');
-	    $userGoal->currentValue = Input::get('currentValue');
-	    $userGoal->save();
+	{	
+		$id = Auth::id();
 
-	    return Redirect::to('user/goals/');
+		$recipe = new Recipe;
+		$recipe->user_id = $id;
+	    $recipe->recipeName = Input::get('recipeName');
+	    $recipe->recipeDesc = Input::get('recipeDesc');
+	    $recipe->proteinPerServing = Input::get('proteinPerServing');
+	    $recipe->fatsPerServing = Input::get('fatsPerServing');
+	    $recipe->carbsPerServing = Input::get('carbsPerServing');
+	    $recipe->calsPerServing = Input::get('calsPerServing');
+	    $recipe->save();
+
+	    return Redirect::to('recipe');
+	}
+
+	public function voteStore()
+	{	
+		$id = Auth::id();
+
+		if (Input::get('thumb-up')){
+			$vote = 1;
+		}else{
+			$vote = 0;
+		}
+
+		$recipe = new RecipeVote;
+		$recipe->user_id = $id;
+	    $recipe->recipe_id = Input::get('recipeID');
+	    $recipe->vote = $vote;
+	    
+	    $recipe->save();
+
+	    return Redirect::to('recipe');
 	}
 
 
@@ -100,7 +122,7 @@ class UserGoalController extends \BaseController {
 	    $userGoal->currentValue = Input::get('currentValue');
 	    $userGoal->save();
 
-	    return Redirect::to('userGoal');
+	    return Redirect::to('recipe');
 	}
 
 

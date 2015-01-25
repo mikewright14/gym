@@ -22,8 +22,7 @@
 
 
 
-		 {{ Form::open(array('url' => 'user/goals/create')) }}
-
+		{{ Form::model($userGoal, array('route' => array('userGoal.update', $userGoal->goalID), 'method' => 'put')) }}
 		<h1>Enter stats</h1>
 
 
