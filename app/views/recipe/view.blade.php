@@ -78,7 +78,10 @@
                 @foreach ($recipes as $recipe)
                     <?php
                         $user = $recipe->User;
-                        $vote = RecipeVote::where('recipe_id', '=', $recipe->recipeID)->where('user_id', '=', $user->id)->first();
+                        $userID =  Auth::id();
+                        $vote = RecipeVote::where('recipe_id', '=', $recipe->recipeID)->where('user_id', '=', $userID)->first();
+                        
+
                     ?>
                     <tr>
 
@@ -98,18 +101,26 @@
                         <td>
                             @if ($vote)
                                 {{ Form::open(array('url' => 'recipe/vote/edit')) }}
+                                 {{ Form::hidden('recipeVoteID', $vote->recipeVoteID) }}
                             @else
                                 {{ Form::open(array('url' => 'recipe/vote')) }}
                             @endif
 
                             {{ Form::hidden('recipeID', $recipe->recipeID) }}
-                            <button name="thumb-up" id="thumb-up" value="1" class="btn btn-default {{ isset($vote->vote) && $vote->vote == 1 ? 'btn-success' : '' }}">
+                           
+
+                            
+                            
+
+
+                            <button name="thumb-up" id="thumb-up" value="1" class="btn btn-default {{ isset($vote->vote)  && $vote->user_id == $userID && $vote->vote == 1 ? 'btn-success' : '' }}">
                                 <i class="fa fa-thumbs-up fa-3"></i>
                             </button>
                             <button name="thumb-down" id="thumb-down" value=
-                            "2" class="btn btn-default {{ isset($vote->vote) && $vote->vote != 1 ? 'btn-success' : '' }}">
+                            "2" class="btn btn-default {{ isset($vote->vote)  && $vote->user_id == $userID && $vote->vote == 0 ? 'btn-danger' : '' }} ">
                                 <i class="fa fa-thumbs-down fa-3"></i>
                             </button>
+
 
                             {{ Form::close() }}
                         </td>
@@ -126,7 +137,7 @@
 
         </div>
 
-        <a href="userGoal/create" class="btn btn-primary btn-xs pull-right">Create Goal</a>
+       
 
 
     </div>

@@ -98,6 +98,7 @@
 	// Recipe Vote //
 	
 	Route::post('recipe/vote', array('as' => 'Recipe', 'uses' => 'RecipeController@voteStore'));
+	Route::post('recipe/vote/edit', array('as' => 'Recipe', 'uses' => 'RecipeController@voteEdit'));
 
 });
 

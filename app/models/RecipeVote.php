@@ -15,6 +15,7 @@ class RecipeVote extends Eloquent implements UserInterface, RemindableInterface 
 	 * @var string
 	 */
 	protected $table = 'recipe_vote';
+	protected $primaryKey = 'recipeVoteID';
 
     public $timestamps = false;
 

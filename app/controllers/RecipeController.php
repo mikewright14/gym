@@ -75,6 +75,31 @@ class RecipeController extends \BaseController {
 	}
 
 
+	public function voteEdit()
+	{	
+		$id = Auth::id();
+
+		if (Input::get('thumb-up')){
+			$vote = 1;
+		}else{
+			$vote = 0;
+		}
+
+		$voteID =  Input::get('recipeVoteID');
+
+		
+		$recipe = RecipeVote::find($voteID);
+		$recipe->user_id = $id;
+	    $recipe->recipe_id = Input::get('recipeID');
+	    $recipe->vote = $vote;
+
+	    
+	    $recipe->save();
+
+	    return Redirect::to('recipe');
+	}
+
+
 	/**
 	 * Display the specified resource.
 	 *
