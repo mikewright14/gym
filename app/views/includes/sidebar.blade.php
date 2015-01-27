@@ -32,6 +32,9 @@
                 <li class="">
                     <a href="/user/goals"><i class="fa fa-area-chart"></i> Your Goals</a>
                 </li>
+                      <li class="">
+                    <a href="/recipe/"><i class="fa fa-area-chart"></i> Keto Recipes</a>
+                </li>
              
                 
 

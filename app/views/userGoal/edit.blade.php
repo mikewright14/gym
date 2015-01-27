@@ -22,7 +22,7 @@
 
 
 
-		{{ Form::model($userGoal, array('route' => array('userGoal.update', $userGoal->goalID), 'method' => 'put')) }}
+		{{ Form::model($userGoal, array('route' => array('UserGoalEdit', $userGoal->goalID), 'method' => 'put')) }}
 		<h1>Enter stats</h1>
 
 

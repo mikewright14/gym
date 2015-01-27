@@ -100,7 +100,7 @@ class UserGoalController extends \BaseController {
 	    $userGoal->currentValue = Input::get('currentValue');
 	    $userGoal->save();
 
-	    return Redirect::to('userGoal');
+	    return Redirect::to('user/goals/');
 	}
 
 

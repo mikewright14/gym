@@ -55,9 +55,9 @@ class UserCardioController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($id)
+	public function edit()
 	{
-
+			$id = Auth::id();
 		
 		 $userCardio = User::find($id)->UserCardio;
 
@@ -75,10 +75,10 @@ class UserCardioController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update()
 	{	
 
-
+		$id = Auth::id();
 
 		$userCardio = User::find($id)->UserStat;
 		$userCardio->user_id = Auth::id();

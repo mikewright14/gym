@@ -11,7 +11,7 @@
         @include('includes.sidebar')
         @include('includes.sidebar-right')
 
-         {{ Form::open(array('url' => 'UserFood')) }}
+         {{ Form::open(array('url' => '/user/food/create/')) }}
         <h1>Enter stats</h1>
 
         <!-- if there are login errors, show them here -->

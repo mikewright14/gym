@@ -10,7 +10,7 @@
 
 	@include('includes.sidebar')
 
-		 {{ Form::model($userCardio, array('route' => array('userCardio.update', $userCardio->user_id), 'method' => 'put')) }}
+		 {{ Form::model($userCardio, array('route' => array('UserCardioEdit', $userCardio->user_id), 'method' => 'put')) }}
 		<h1>Enter stats</h1>
 
 		<!-- if there are login errors, show them here -->

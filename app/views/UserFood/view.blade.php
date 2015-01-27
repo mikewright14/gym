@@ -90,6 +90,7 @@ datepickerValue = datepickerTmp[2] + '-' + datepickerTmp[0]+ '-' + datepickerTmp
                             $fatSum = array();
                             
                             foreach($users  as $user){ 
+
                           
                             if ($user->mealType == 1) {
                             
@@ -138,7 +139,7 @@ datepickerValue = datepickerTmp[2] + '-' + datepickerTmp[0]+ '-' + datepickerTmp
                                 <td>{{array_sum($carbSum)}}</td>
                                 <td>{{array_sum($fatSum)}}</td>
                                 <td>
-                                      <a href="/UserFood/create/{{$date}}"><button style ="float:right;" class="btn btn-success"><i class="fa fa-check-circle"></i> Add to diary</button></a>
+                                      <a href="/user/food/create/{{$date}}/1"><button style ="float:right;" class="btn btn-success"><i class="fa fa-check-circle"></i> Add to diary</button></a>
                                 </td>
                             </tr>
                         </tbody>
@@ -158,7 +159,7 @@ datepickerValue = datepickerTmp[2] + '-' + datepickerTmp[0]+ '-' + datepickerTmp
           <div class="timeline-block">
                     <div class="panel panel-default event">
                         <div class="panel-heading title">
-                            Breakfast
+                            Lunch
                         </div>
                        
                            <!-- Progress table -->
@@ -236,7 +237,7 @@ datepickerValue = datepickerTmp[2] + '-' + datepickerTmp[0]+ '-' + datepickerTmp
                                 <td>{{array_sum($carbSum)}}</td>
                                 <td>{{array_sum($fatSum)}}</td>
                                 <td>
-                                      <a href="UserFood/create/{{$date}}"><button style ="float:right;" class="btn btn-success"><i class="fa fa-check-circle"></i> Add to diary</button></a>
+                                      <a href="/user/food/create/{{$date}}/2"><button style ="float:right;" class="btn btn-success"><i class="fa fa-check-circle"></i> Add to diary</button></a>
                                 </td>
                             </tr>
                         </tbody>
@@ -254,7 +255,7 @@ datepickerValue = datepickerTmp[2] + '-' + datepickerTmp[0]+ '-' + datepickerTmp
          <div class="timeline-block">
                     <div class="panel panel-default event">
                         <div class="panel-heading title">
-                            Breakfast
+                            Dinner
                         </div>
                        
                            <!-- Progress table -->
@@ -332,7 +333,8 @@ datepickerValue = datepickerTmp[2] + '-' + datepickerTmp[0]+ '-' + datepickerTmp
                                 <td>{{array_sum($carbSum)}}</td>
                                 <td>{{array_sum($fatSum)}}</td>
                                 <td>
-                                      <a href="UserFood/create/{{$date}}"><button style ="float:right;" class="btn btn-success"><i class="fa fa-check-circle"></i> Add to diary</button></a>
+
+                                      <a href="/user/food/create/{{$date}}/3"><button style ="float:right;" class="btn btn-success"><i class="fa fa-check-circle"></i> Add to diary</button></a>
                                 </td>
                             </tr>
                         </tbody>

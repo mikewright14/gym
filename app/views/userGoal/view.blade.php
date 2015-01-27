@@ -168,7 +168,7 @@
                                 
                                 <td class="text-right">
 
-                                    <a href="userGoal/{{ $user['goalID'] }}/edit" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil"></i></a>
+                                    <a href="/user/goals/{{ $user['goalID'] }}/edit" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil"></i></a>
 
                                     <a href="#" class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-times"></i></a>
 
@@ -186,7 +186,7 @@
 
                 </div>
 
-                 <a href="userGoal/create" class="btn btn-primary btn-xs pull-right">Create Goal</a>
+                 <a href="/user/goals/create" class="btn btn-primary btn-xs pull-right">Create Goal</a>
 
 
 

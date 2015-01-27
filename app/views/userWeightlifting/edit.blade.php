@@ -12,7 +12,7 @@
     @include('includes.sidebar')
     @include('includes.sidebar-right')
 
-		  {{ Form::model($userWeightlifting, array('route' => array('userWeightlifting.update', $userWeightlifting->user_id), 'method' => 'put')) }}
+		  {{ Form::model($userWeightlifting, array('route' => array('UserWeightliftingEdit', $userWeightlifting->user_id), 'method' => 'put')) }}
 		<h1>Enter stats</h1>
 
 		<!-- if there are login errors, show them here -->

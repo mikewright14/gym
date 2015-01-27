@@ -53,7 +53,7 @@ class UserWeightliftingController extends \BaseController {
 	    $user->save();
 
 		
-    	return Redirect::to('userStat');
+    	return Redirect::to('/user/stats/');
 	}
 
 
@@ -75,8 +75,10 @@ class UserWeightliftingController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-		public function edit($id)
+		public function edit()
 	{
+
+		$id = Auth::id();
 
 		
 		 $userWeightlifting = User::find($id)->UserWeightlifting;
@@ -95,14 +97,14 @@ class UserWeightliftingController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update()
 	{	
 
-
+		$id = Auth::id();
  
 		$userWeightlifting = User::find($id)->UserWeightlifting;
 		
-		$userWeightlifting->user_id = $id = Auth::id();
+		$userWeightlifting->user_id = $id;
 	    $userWeightlifting->maxBenchPressWeight = Input::get('maxBenchPressWeight');
 	    $userWeightlifting->repBenchPressWeight = Input::get('repBenchPressWeight');
 	    $userWeightlifting->repBenchPressReps = Input::get('repBenchPressReps');
@@ -112,10 +114,13 @@ class UserWeightliftingController extends \BaseController {
 		$userWeightlifting->maxDeadliftWeight = Input::get('maxDeadliftWeight');
 	    $userWeightlifting->repDeadliftWeight = Input::get('repDeadliftWeight');
 	    $userWeightlifting->repDeadliftReps = Input::get('repDeadliftReps');
+	    $userWeightlifting->maxOverheadPressWeight = Input::get('maxOverheadPressWeight');
+	    $userWeightlifting->repOverheadPressReps = Input::get('repOverheadPressReps');
+	    $userWeightlifting->repOverheadPressWeight = Input::get('repOverheadPressWeight');
 	   
 	    $userWeightlifting->save();
 
-	    return Redirect::to('userStat');
+	    return Redirect::to('/user/stats/');
 	}
 
 

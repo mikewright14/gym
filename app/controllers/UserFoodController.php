@@ -117,7 +117,7 @@ class UserFoodController extends \BaseController {
 		
 
 		
-    	return Redirect::to('UserFood/List/');
+    	return Redirect::to('user/food/'.Input::get('date'));
 	}
 
 
