@@ -13,6 +13,10 @@
 
 {{ HTML::script('plugins/bootstrap/js/bootstrap.min.js') }}
 {{ HTML::script('plugins/jquery.blockui.min.js') }}
+{{ HTML::script('plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js') }}
+{{ HTML::script('plugins/jquery-slimscroll/jquery.slimscroll.min.js') }}
+{{ HTML::script('plugins/bootstrap-switch/js/bootstrap-switch.min.js') }}
+
 {{ HTML::script('plugins/uniform/jquery.uniform.min.js') }}
 {{ HTML::script('plugins/jquery.cokie.min.js') }}
 {{ HTML::script('global/scripts/metronic.js') }}

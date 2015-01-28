@@ -13,6 +13,8 @@
 <link rel="stylesheet" href="{{ URL::asset('plugins/bootstrap/css/bootstrap.min.css') }}" type="text/css"> 
 <link rel="stylesheet" href="{{ URL::asset('plugins/uniform/css/uniform.default.css') }}" type="text/css"> 
 <link rel="stylesheet" href="{{ URL::asset('plugins/bootstrap-toastr/toastr.min.css') }}" type="text/css"> 
+<link rel="stylesheet" href="{{ URL::asset('plugins/select2/select2.css') }}" type="text/css"> 
+
 
 
 

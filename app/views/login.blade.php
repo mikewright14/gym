@@ -7,9 +7,24 @@
 	@include('includes.head')
 
 
-@if( Session::has('registered') )
-script type="text/javascript">
+@if( Session::get('registered') )
+<script type="text/javascript">
 	$(function(){
+
+toastr.options = {
+  "closeButton": true,
+  "debug": false,
+  "positionClass": "toast-top-center",
+  "onclick": null,
+  "showDuration": "1000",
+  "hideDuration": "1000",
+  "timeOut": "5000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
+}
     toastr.info('You successfully registered.'); 
 	});
 </script>

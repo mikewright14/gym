@@ -1,156 +1,80 @@
-<div class="sidebar left hidden-xs">
-        <a id="brand" href="index.html">Keto Web App</a>
-        <div id="menu" data-scrollable>
-            <ul>
-                
-                <li class="category">Navigation</li>
-                <li class="hasSubmenu  ">
-                    <li class="">
-                        <?php $date = date("Y-m-d"); ?>
-                    <a href="/user/food/{{$date}}"><i class="icon-lock-fill"></i> Food Diary</a>
+<div class="clearfix">
+</div>
+<!-- BEGIN CONTAINER -->
+<div class="page-container">
+    <!-- BEGIN SIDEBAR -->
+    <div class="page-sidebar-wrapper">
+        <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+        <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+        <div class="page-sidebar navbar-collapse collapse">
+            <!-- BEGIN SIDEBAR MENU -->
+            <!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
+            <!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
+            <!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
+            <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+            <!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
+            <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+            <ul class="page-sidebar-menu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+                <li class="start ">
+                    <a href="index.html">
+                    <i class="icon-home"></i>
+                    <span class="title">Dashboard</span>
+                    </a>
                 </li>
+                    <li>
+                    <a href="index.html">
+                    <i class="icon-home"></i>
+                    <span class="title">Food Diary</span>
+                    </a>
                 </li>
-                <li class="">
-                    <a href="#"><i class="icon-user-1"></i> Profile</a>
+                       <li>
+                    <a href="index.html">
+                    <i class="icon-home"></i>
+                    <span class="title">Stats</span>
+                    </a>
                 </li>
-                <li class="">
-                    <a href="#"><i class="fa fa-group"></i> Users</a>
-                </li>
-                <li class="">
-                    <a href="#"><i class="icon-comment-fill-1"></i> Messages</a>
-                </li>
-                       <li class="">
-                    <a href="#"><i class="icon-comment-fill-1"></i> News Feed</a>
-                </li>
-                       <li class="">
-                    <a href="#"><i class="icon-comment-fill-1"></i> Your Progress</a>
-                </li>
-                </li>
-                       <li class="">
-                    <a href="/user/stats"><i class="fa fa-area-chart"></i> Your Stats</a>
-                </li>
-                <li class="">
-                    <a href="/user/goals"><i class="fa fa-area-chart"></i> Your Goals</a>
-                </li>
-                      <li class="">
-                    <a href="/recipe/"><i class="fa fa-area-chart"></i> Keto Recipes</a>
-                </li>
-             
-                
-
-                <!-- Sample 2 Level Collapse -->
-                <li class="hasSubmenu">
-                  
-                    <ul class="collapse" id="collapse">
-                        <li class="hasSubmenu">
-                            <a href="#collapse-1" data-toggle="collapse"><i class="fa fa-circle-o"></i> Submenu</a>
-                            <ul class="collapse" id="collapse-1">
-                                <li><a href="#">Regular Link</a>
-                                </li>
-                            </ul>
+                <li>
+                    <a href="javascript:;">
+                    <i class="icon-basket"></i>
+                    <span class="title">Goals</span>
+                    <span class="arrow "></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="ecommerce_index.html">
+                            <i class="icon-home"></i>
+                            Dashboard</a>
                         </li>
-                        <li><a href="#"><i class="fa fa-circle-o"></i> Regular Link</a>
+                        <li>
+                            <a href="ecommerce_orders.html">
+                            <i class="icon-basket"></i>
+                            Orders</a>
                         </li>
-                    </ul>
-                </li>
-                <li class="category border top">Friends Updates</li>
-                <li class="reset">
-                    <ul>
-                        <li class="media news-item">
-                            <span class="news-item-success pull-right "></i></span>
-                            <span class="pull-left media-object">
-                            <i class="fa fa-fw fa-bell"></i>
-                        </span>
-                            <div class="media-body">
-                                <a href="" class="text-white">Walker</a> just logged in
-                                <span class="time">2 min ago</span>
-                            </div>
+                        <li>
+                            <a href="ecommerce_orders_view.html">
+                            <i class="icon-tag"></i>
+                            Order View</a>
                         </li>
-                        <li class="media news-item">
-                            <span class="news-item-success pull-right "></span>
-                            <span class="pull-left media-object">
-                            <i class="fa fa-fw fa-bell"></i>
-                        </span>
-                            <div class="media-body">
-                                <a href="" class="text-white">Chris</a> just added <a href="" class="text-white">Curt</a> as a friend
-                                <span class="time">5 min ago</span>
-                            </div>
+                        <li>
+                            <a href="ecommerce_products.html">
+                            <i class="icon-handbag"></i>
+                            Products</a>
                         </li>
-                        <li class="media news-item">
-                            <span class="pull-left media-object">
-                            <i class="fa fa-fw fa-bell"></i>
-                        </span>
-                            <div class="media-body">
-                                <a href="" class="text-white">Carl</a> just logged in
-                                <span class="time">8 min ago</span>
-                            </div>
-                        </li>
-                        <li class="media news-item">
-                            <span class="pull-left media-object">
-                            <i class="fa fa-fw fa-bell"></i>
-                        </span>
-                            <div class="media-body">
-                                <a href="" class="text-white">Curt</a> just logged in
-                                <span class="time">12 min ago</span>
-                            </div>
-                        </li>
-                        <li class="media news-item">
-                            <span class="pull-left media-object">
-                            <i class="fa fa-fw fa-bell"></i>
-                        </span>
-                            <div class="media-body">
-                                <a href="" class="text-white">Mike</a> just logged in
-                                <span class="time">15 min ago</span>
-                            </div>
+                        <li>
+                            <a href="ecommerce_products_edit.html">
+                            <i class="icon-pencil"></i>
+                            Product Edit</a>
                         </li>
                     </ul>
                 </li>
-
-                  <li class="category border top">Chat</li>
-                <li class="reset">
-                    <ul>
-                        <li class="media news-item">
-                            <span class="news-item-success pull-right "><i class="fa fa-circle"></i></span>
-                            <span class="pull-left media-object">
-                            <i class="fa fa-fw fa-wechat"></i>
-                        </span>
-                            <div class="media-body">
-                                <a href="" class="text-white">Walker</a> 
-                               
-                            </div>
-                        </li>
-                          <li class="media news-item">
-                            <span class="news-item-success pull-right "><i class="fa fa-circle"></i></span>
-                            <span class="pull-left media-object">
-                            <i class="fa fa-fw fa-wechat"></i>
-                        </span>
-                            <div class="media-body">
-                                <a href="" class="text-white">Chris</a> 
-                               
-                            </div>
-                        </li>  <li class="media news-item">
-                            <span class="news-item-success pull-right "><i class="fa fa-circle"></i></span>
-                            <span class="pull-left media-object">
-                            <i class="fa fa-fw fa-wechat"></i>
-                        </span>
-                            <div class="media-body">
-                                <a href="" class="text-white">Curt</a> 
-                               
-                            </div>
-                        </li>  <li class="media news-item">
-                            <span class="news-item-success pull-right "><i class="fa fa-circle"></i></span>
-                            <span class="pull-left media-object">
-                            <i class="fa fa-fw fa-wechat"></i>
-                        </span>
-                            <div class="media-body">
-                                <a href="" class="text-white">Carl</a> 
-                               
-                            </div>
-                     
-    
-                
-            </ul>
-                <!-- LOGOUT BUTTON -->
-    <a href="{{ URL::to('logout') }}">Logout</a>
+                       <li>
+                    <a href="index.html">
+                    <i class="icon-home"></i>
+                    <span class="title">Recipes</span>
+                    </a>
+                </li>
+              
+                 
+            <!-- END SIDEBAR MENU -->
         </div>
     </div>

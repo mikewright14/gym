@@ -5,7 +5,6 @@
 	@include('includes.head')
 </head>
 <body>
-<div class="container">
 
 
 	@include('includes.sidebar')
