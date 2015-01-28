@@ -54,8 +54,8 @@ class UserController extends \BaseController {
 	    $user->password = Hash::make(Input::get('password'));
 	    $user->save();
 
-		
-    	return Redirect::to('login')->with('success', 1);
+		Session::flash('registered', 'true');
+    	return Redirect::to('login');
 	}
 
 

@@ -8,8 +8,9 @@
 <![endif]-->
 
 
-{{ HTML::script('plugins/jquery.min.js') }}
-{{ HTML::script('plugins/jquery-migrate.min.js') }}
+
+
+
 {{ HTML::script('plugins/bootstrap/js/bootstrap.min.js') }}
 {{ HTML::script('plugins/jquery.blockui.min.js') }}
 {{ HTML::script('plugins/uniform/jquery.uniform.min.js') }}
@@ -17,8 +18,13 @@
 {{ HTML::script('global/scripts/metronic.js') }}
 {{ HTML::script('layout/scripts/layout.js') }}
 {{ HTML::script('layout/scripts/demo.js') }}
-{{ HTML::script('pages/scripts/login.js') }}
+
 {{ HTML::script('plugins/jquery-validation/js/jquery.validate.min.js') }}
+{{ HTML::script('pages/scripts/ui-toastr.js') }}
+{{ HTML::script('plugins/bootstrap-toastr/toastr.min.js') }}
+{{ HTML::script('pages/scripts/login.js') }}
+
+
 
 
 

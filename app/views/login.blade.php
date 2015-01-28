@@ -5,8 +5,21 @@
 <head>
 	<title>Look at me Login</title>
 	@include('includes.head')
+
+
+@if( Session::has('registered') )
+script type="text/javascript">
+	$(function(){
+    toastr.info('You successfully registered.'); 
+	});
+</script>
+@endif 
+	
+	
 </head>
 
+
+	
 
 	<body class="login">
 <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
@@ -19,26 +32,9 @@
 <!-- END LOGO -->
 <!-- BEGIN LOGIN -->
 <div class="content">
-<script type ="text/javascript">
 
-toastr[success]("My name is Inigo Montoya. You killed my father. Prepare to die!")
 
-toastr.options = {
-  "closeButton": true,
-  "debug": false,
-  "positionClass": "toast-top-center",
-  "onclick": null,
-  "showDuration": "1000",
-  "hideDuration": "1000",
-  "timeOut": "5000",
-  "extendedTimeOut": "1000",
-  "showEasing": "swing",
-  "hideEasing": "linear",
-  "showMethod": "fadeIn",
-  "hideMethod": "fadeOut"
-}
 
-</script>
 			<!-- BEGIN LOGIN FORM -->
 			{{ Form::open(array('url' => 'login', 'class' => 'login-form')) }}
 			<h3 class="form-title">Sign In</h3>
