@@ -10,7 +10,7 @@
 
 	@include('includes.sidebar')
 
-	 {{ Form::open(array('url' => 'users')) }}
+	 {{ Form::open(array('url' => 'user/create/')) }}
 		<h1>Register</h1>
 
 		<!-- if there are login errors, show them here -->

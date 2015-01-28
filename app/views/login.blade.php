@@ -11,6 +11,7 @@
 	<body class="login">
 <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
 <div class="menu-toggler sidebar-toggler">
+
 </div>
 <!-- END SIDEBAR TOGGLER BUTTON -->
 <!-- BEGIN LOGO -->
@@ -18,8 +19,28 @@
 <!-- END LOGO -->
 <!-- BEGIN LOGIN -->
 <div class="content">
+<script type ="text/javascript">
+
+toastr[success]("My name is Inigo Montoya. You killed my father. Prepare to die!")
+
+toastr.options = {
+  "closeButton": true,
+  "debug": false,
+  "positionClass": "toast-top-center",
+  "onclick": null,
+  "showDuration": "1000",
+  "hideDuration": "1000",
+  "timeOut": "5000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
+}
+
+</script>
 			<!-- BEGIN LOGIN FORM -->
-			{{ Form::open(array('url' => 'login', 'class'=>'login-form' )) }}
+			{{ Form::open(array('url' => 'login', 'class' => 'login-form')) }}
 			<h3 class="form-title">Sign In</h3>
 			<div class="alert alert-danger display-hide">
 				<button class="close" data-close="alert"></button>
@@ -72,57 +93,52 @@
 	</form>
 	<!-- END FORGOT PASSWORD FORM -->
 	<!-- BEGIN REGISTRATION FORM -->
-	<form class="register-form" action="index.html" method="post">
+	
+		 {{ Form::open(array('url' => 'user/create/', 'class' => 'register-form')) }}
 		<h3>Sign Up</h3>
 		<p class="hint">
 			 Enter your personal details below:
 		</p>
 		<div class="form-group">
-			<label class="control-label visible-ie8 visible-ie9">Full Name</label>
-			<input class="form-control placeholder-no-fix" type="text" placeholder="Full Name" name="fullname"/>
+			
+			{{ Form::label('firstName', 'firstName Address', array('class' =>'control-label visible-ie8 visible-ie9')) }}
+			{{ Form::text('firstName', Input::old('firstName'), array('placeholder' => 'First Name', 'class' => 'form-control form-control-solid placeholder-no-fix')) }}
+		</div>
+
+				<div class="form-group">
+			{{ Form::label('lastName', 'lastName Address', array('class' =>'control-label visible-ie8 visible-ie9')) }}
+			{{ Form::text('lastName', Input::old('lastName'), array('placeholder' => 'Last Name', 'class' => 'form-control form-control-solid placeholder-no-fix')) }}
 		</div>
 		<div class="form-group">
 			<!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
-			<label class="control-label visible-ie8 visible-ie9">Email</label>
-			<input class="form-control placeholder-no-fix" type="text" placeholder="Email" name="email"/>
+			{{ Form::label('email', 'Email Address', array('class' =>'control-label visible-ie8 visible-ie9')) }}
+			{{ Form::text('email', Input::old('email'), array('placeholder' => 'Email', 'class' => 'form-control form-control-solid placeholder-no-fix')) }}
 		</div>
-		<div class="form-group">
-			<label class="control-label visible-ie8 visible-ie9">Address</label>
-			<input class="form-control placeholder-no-fix" type="text" placeholder="Address" name="address"/>
-		</div>
-		<div class="form-group">
-			<label class="control-label visible-ie8 visible-ie9">City/Town</label>
-			<input class="form-control placeholder-no-fix" type="text" placeholder="City/Town" name="city"/>
-		</div>
+
 		
 		<p class="hint">
 			 Enter your account details below:
 		</p>
 		<div class="form-group">
-			<label class="control-label visible-ie8 visible-ie9">Username</label>
-			<input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Username" name="username"/>
+			{{ Form::label('username', 'Username ', array('class' =>'control-label visible-ie8 visible-ie9')) }}
+			{{ Form::text('username', Input::old('username'), array('placeholder' => 'Username', 'class' => 'form-control form-control-solid placeholder-no-fix')) }}
 		</div>
 		<div class="form-group">
-			<label class="control-label visible-ie8 visible-ie9">Password</label>
-			<input class="form-control placeholder-no-fix" type="password" autocomplete="off" id="register_password" placeholder="Password" name="password"/>
-		</div>
+			{{ Form::label('password', 'Password', array('class' =>'control-label visible-ie8 visible-ie9')) }}
+							{{ Form::password('password', array( 'placeholder' => 'Password','class' => 'form-control form-control-solid placeholder-no-fix')) }}
+				</div>
+		
 		<div class="form-group">
-			<label class="control-label visible-ie8 visible-ie9">Re-type Your Password</label>
-			<input class="form-control placeholder-no-fix" type="password" autocomplete="off" placeholder="Re-type Your Password" name="rpassword"/>
-		</div>
-		<div class="form-group margin-top-20 margin-bottom-20">
-			<label class="check">
-			<input type="checkbox" name="tnc"/> I agree to the <a href="#">
-			Terms of Service </a>
-			& <a href="#">
-			Privacy Policy </a>
-			</label>
-			<div id="register_tnc_error">
-			</div>
-		</div>
+			{{ Form::label('password', 'Password', array('class' =>'control-label visible-ie8 visible-ie9')) }}
+			{{ Form::password('password', array( 'placeholder' => 'Repeat Password','class' => 'form-control form-control-solid placeholder-no-fix')) }}
+				</div>
+		
 		<div class="form-actions">
-			<button type="button" id="register-back-btn" class="btn btn-default">Back</button>
-			<button type="submit" id="register-submit-btn" class="btn btn-success uppercase pull-right">Submit</button>
+		
+
+			<p>{{ Form::button('Back', array( 'id' =>'register-back-btn', 'class' => 'btn btn-default')) }}
+			{{ Form::submit('Submit', array( 'id' =>'register-submit-btn', 'class' => 'btn btn-success uppercase pull-right')) }}</p>
+				{{ Form::close() }} 
 		</div>
 	</form>
 	<!-- END REGISTRATION FORM -->

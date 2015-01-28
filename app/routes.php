@@ -17,6 +17,7 @@
 
 	// route to show the login form
 	Route::get('login', array('uses' => 'HomeController@showLogin'));
+	
 
 	// route to process the form
 	Route::post('login', array('uses' => 'HomeController@doLogin'));
@@ -29,7 +30,9 @@
 	// app/routes.php
 
 	Route::get('logout', array('uses' => 'HomeController@doLogout'));
-
+	Route::get('user/create/', array('as' => 'User', 'uses' => 'UserController@create'));
+	Route::get('user/success/', array('as' => 'UserSuccess', 'uses' => 'UserController@success'));
+	Route::post('user/create/', array('as' => 'User', 'uses' => 'UserController@store'));
 	
 	//---RESOURCES---//
 	
@@ -38,9 +41,7 @@
 {
 	
 // User Routes // 
-	Route::get('user/create/', array('as' => 'User', 'uses' => 'UserController@create'));
-	Route::get('user/success/', array('as' => 'UserSuccess', 'uses' => 'UserController@success'));
-	Route::post('user/create/', array('as' => 'User', 'uses' => 'UserController@store'));
+
 
 
 	// User Stats //

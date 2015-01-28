@@ -45,6 +45,7 @@ class UserController extends \BaseController {
 	 */
 	public function store()
 	{
+
 		$user = new User;
 	    $user->firstName = Input::get('firstName');
 	    $user->lastName = Input::get('lastName');
@@ -54,7 +55,7 @@ class UserController extends \BaseController {
 	    $user->save();
 
 		
-    	return Redirect::to('users.success');
+    	return Redirect::to('login')->with('success', 1);
 	}
 
 
