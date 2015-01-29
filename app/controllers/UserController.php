@@ -45,6 +45,7 @@ class UserController extends \BaseController {
 	 */
 	public function store()
 	{
+
 		$user = new User;
 	    $user->firstName = Input::get('firstName');
 	    $user->lastName = Input::get('lastName');
@@ -53,8 +54,8 @@ class UserController extends \BaseController {
 	    $user->password = Hash::make(Input::get('password'));
 	    $user->save();
 
-		
-    	return Redirect::to('users.success');
+		Session::flash('registered', 'true');
+    	return Redirect::to('login');
 	}
 
 
