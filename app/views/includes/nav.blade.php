@@ -6,7 +6,7 @@
         <!-- BEGIN LOGO -->
         <div class="page-logo">
             <a href="index.html">
-            <img src="" alt="logo" class="logo-default"/>
+            <img src="" alt="My Keto Pal" class="logo-default"/>
             </a>
             <div class="menu-toggler sidebar-toggler">
                 <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
@@ -93,7 +93,7 @@
                                         <span class="label label-sm label-icon label-success">
                                         <i class="fa fa-plus"></i>
                                         </span>
-                                        New user registered. </span>
+                                        Chris has just completed a goal. </span>
                                         </a>
                                     </li>
                                     <li>
@@ -103,7 +103,7 @@
                                         <span class="label label-sm label-icon label-danger">
                                         <i class="fa fa-bolt"></i>
                                         </span>
-                                        Server #12 overloaded. </span>
+                                        Curt has just weighed in...oh dear </span>
                                         </a>
                                     </li>
                                     <li>
@@ -113,7 +113,7 @@
                                         <span class="label label-sm label-icon label-warning">
                                         <i class="fa fa-bell-o"></i>
                                         </span>
-                                        Server #2 not responding. </span>
+                                       Curt is carbing up, again. </span>
                                         </a>
                                     </li>
                                     <li>
@@ -123,59 +123,10 @@
                                         <span class="label label-sm label-icon label-info">
                                         <i class="fa fa-bullhorn"></i>
                                         </span>
-                                        Application error. </span>
+                                       Carl is angry</span>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="javascript:;">
-                                        <span class="time">2 days</span>
-                                        <span class="details">
-                                        <span class="label label-sm label-icon label-danger">
-                                        <i class="fa fa-bolt"></i>
-                                        </span>
-                                        Database overloaded 68%. </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">
-                                        <span class="time">3 days</span>
-                                        <span class="details">
-                                        <span class="label label-sm label-icon label-danger">
-                                        <i class="fa fa-bolt"></i>
-                                        </span>
-                                        A user IP blocked. </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">
-                                        <span class="time">4 days</span>
-                                        <span class="details">
-                                        <span class="label label-sm label-icon label-warning">
-                                        <i class="fa fa-bell-o"></i>
-                                        </span>
-                                        Storage Server #4 not responding dfdfdfd. </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">
-                                        <span class="time">5 days</span>
-                                        <span class="details">
-                                        <span class="label label-sm label-icon label-info">
-                                        <i class="fa fa-bullhorn"></i>
-                                        </span>
-                                        System Error. </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">
-                                        <span class="time">9 days</span>
-                                        <span class="details">
-                                        <span class="label label-sm label-icon label-danger">
-                                        <i class="fa fa-bolt"></i>
-                                        </span>
-                                        Storage server failed. </span>
-                                        </a>
-                                    </li>
+                                   
                                 </ul>
                             </li>
                         </ul>
@@ -205,11 +156,11 @@
                                         </span>
                                         <span class="subject">
                                         <span class="from">
-                                        Lisa Wong </span>
+                                        Curt Wong </span>
                                         <span class="time">Just Now </span>
                                         </span>
                                         <span class="message">
-                                        Vivamus sed auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                                        carb blockers mate </span>
                                         </a>
                                     </li>
                                     <li>
@@ -219,11 +170,11 @@
                                         </span>
                                         <span class="subject">
                                         <span class="from">
-                                        Richard Doe </span>
+                                        Chris Morris </span>
                                         <span class="time">16 mins </span>
                                         </span>
                                         <span class="message">
-                                        Vivamus sed congue nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                                        I am allowed to stay up until 11pm tonight, jeeves said he wouldn't tell mummy </span>
                                         </a>
                                     </li>
                                     <li>
@@ -233,41 +184,14 @@
                                         </span>
                                         <span class="subject">
                                         <span class="from">
-                                        Bob Nilson </span>
+                                        Carl Rigby </span>
                                         <span class="time">2 hrs </span>
                                         </span>
                                         <span class="message">
-                                        Vivamus sed nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                                        I got demoted again </span>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="inbox.html?a=view">
-                                        <span class="photo">
-                                        <img src="" class="img-circle" alt="">
-                                        </span>
-                                        <span class="subject">
-                                        <span class="from">
-                                        Lisa Wong </span>
-                                        <span class="time">40 mins </span>
-                                        </span>
-                                        <span class="message">
-                                        Vivamus sed auctor 40% nibh congue nibh... </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="inbox.html?a=view">
-                                        <span class="photo">
-                                        <img src="" class="img-circle" alt="">
-                                        </span>
-                                        <span class="subject">
-                                        <span class="from">
-                                        Richard Doe </span>
-                                        <span class="time">46 mins </span>
-                                        </span>
-                                        <span class="message">
-                                        Vivamus sed congue nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
-                                        </a>
-                                    </li>
+                                   
                                 </ul>
                             </li>
                         </ul>
@@ -293,7 +217,7 @@
                                     <li>
                                         <a href="javascript:;">
                                         <span class="task">
-                                        <span class="desc">New release v1.2 </span>
+                                        <span class="desc">Bench 200lbs </span>
                                         <span class="percent">30%</span>
                                         </span>
                                         <span class="progress">
@@ -304,7 +228,7 @@
                                     <li>
                                         <a href="javascript:;">
                                         <span class="task">
-                                        <span class="desc">Application deployment</span>
+                                        <span class="desc">Lose 20lbs</span>
                                         <span class="percent">65%</span>
                                         </span>
                                         <span class="progress">
@@ -315,7 +239,7 @@
                                     <li>
                                         <a href="javascript:;">
                                         <span class="task">
-                                        <span class="desc">Mobile app release</span>
+                                        <span class="desc">Deadlift 210lbs</span>
                                         <span class="percent">98%</span>
                                         </span>
                                         <span class="progress">
@@ -326,7 +250,7 @@
                                     <li>
                                         <a href="javascript:;">
                                         <span class="task">
-                                        <span class="desc">Database migration</span>
+                                        <span class="desc">Squat 220lbs</span>
                                         <span class="percent">10%</span>
                                         </span>
                                         <span class="progress">
@@ -337,7 +261,7 @@
                                     <li>
                                         <a href="javascript:;">
                                         <span class="task">
-                                        <span class="desc">Web server upgrade</span>
+                                        <span class="desc">Run 5 Miles</span>
                                         <span class="percent">58%</span>
                                         </span>
                                         <span class="progress">
@@ -345,28 +269,7 @@
                                         </span>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="javascript:;">
-                                        <span class="task">
-                                        <span class="desc">Mobile development</span>
-                                        <span class="percent">85%</span>
-                                        </span>
-                                        <span class="progress">
-                                        <span style="width: 85%;" class="progress-bar progress-bar-success" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span class="sr-only">85% Complete</span></span>
-                                        </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">
-                                        <span class="task">
-                                        <span class="desc">New UI release</span>
-                                        <span class="percent">38%</span>
-                                        </span>
-                                        <span class="progress progress-striped">
-                                        <span style="width: 38%;" class="progress-bar progress-bar-important" aria-valuenow="18" aria-valuemin="0" aria-valuemax="100"><span class="sr-only">38% Complete</span></span>
-                                        </span>
-                                        </a>
-                                    </li>
+                                   
                                 </ul>
                             </li>
                         </ul>
@@ -377,7 +280,7 @@
                     <li class="dropdown dropdown-user dropdown-dark">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
                         <span class="username username-hide-on-mobile">
-                        Nick </span>
+                        Mike </span>
                         <!-- DOC: Do not remove below empty space(&nbsp;) as its purposely used -->
                         <img alt="" class="img-circle" src=""/>
                         </a>
@@ -398,18 +301,15 @@
                             </li>
                             <li>
                                 <a href="page_todo.html">
-                                <i class="icon-rocket"></i> My Tasks <span class="badge badge-success">
+                                <i class="icon-rocket"></i> My Goals <span class="badge badge-success">
                                 7 </span>
                                 </a>
                             </li>
                             <li class="divider">
                             </li>
+                          
                             <li>
-                                <a href="extra_lock.html">
-                                <i class="icon-lock"></i> Lock Screen </a>
-                            </li>
-                            <li>
-                                <a href="login.html">
+                                <a href="/logout/">
                                 <i class="icon-key"></i> Log Out </a>
                             </li>
                         </ul>

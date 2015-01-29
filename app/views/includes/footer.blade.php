@@ -27,6 +27,8 @@
 {{ HTML::script('pages/scripts/ui-toastr.js') }}
 {{ HTML::script('plugins/bootstrap-toastr/toastr.min.js') }}
 {{ HTML::script('pages/scripts/login.js') }}
+{{ HTML::script('pages/scripts/charts-amcharts.js') }}
+
 
 
 
@@ -47,6 +49,7 @@ Metronic.init(); // init metronic core components
 Layout.init(); // init current layout
 Login.init();
 Demo.init();
+ChartsAmcharts.init();
 });
 </script>
 <!-- END JAVASCRIPTS -->
