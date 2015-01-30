@@ -1,0 +1,20 @@
+ideas:
+
+Workout planner, will be a form with a list of every exercise categorized by the body part. People can create a workout and set which days they will do a particular workout out.
+
+A regime will contain many workouts
+
+a workout will contain many exercises
+
+an exercise will contain many sets 
+
+a set will contain weight + reps
+
+Workout Notes
+
+You set a regime active, you can't have more than 1 active regime.
+
+more/less than the planned workout will result in a messahe
+
+possibly burnt calories
+
