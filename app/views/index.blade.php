@@ -125,8 +125,8 @@
                     <div class="dashboard-stat2">
                         <div class="display">
                             <div class="number">
-                                <h3 class="font-purple-soft">WEDNESDAY</h3>
-                                <small>Next Weigh In.</small>
+                                <h3 class="font-purple-soft">1.2lbs</h3>
+                                <small>Projected weight loss for the week.</small>
                             </div>
                             <div class="icon">
                                 <i class="icon-user"></i>
@@ -134,7 +134,7 @@
                         </div>
                         <div class="progress-info">
                             <div class="progress">
-                                <span style="width: 95%;" class="progress-bar progress-bar-success purple-soft">
+                                <span style="width: 57%;" class="progress-bar progress-bar-success purple-soft">
                                 <span class="sr-only">95% almost there </span>
                                 </span>
                             </div>
@@ -518,6 +518,145 @@
                             <!-- END CHART PORTLET-->
                         </div>
                     </div>
+
+                    <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <!-- BEGIN PORTLET-->
+                    <div class="portlet light tasks-widget">
+                        <div class="portlet-title">
+                            <div class="caption caption-md">
+                                <i class="icon-bar-chart theme-font-color hide"></i>
+                                <span class="caption-subject theme-font-color bold uppercase">things</span>
+                                <span class="caption-helper">16 pending</span>
+                            </div>
+                            <div class="inputs">
+                                <div class="portlet-input input-small input-inline">
+                                    <div class="input-icon right">
+                                        <i class="icon-magnifier"></i>
+                                        <input type="text" class="form-control form-control-solid" placeholder="search...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                            <div class="task-content">
+                                <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 282px;"><div class="scroller" style="height: 282px; overflow: hidden; width: auto;" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2" data-initialized="1">
+                                  
+                                    <!-- END START TASK LIST -->
+                                </div><div class="slimScrollBar" style="width: 7px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; height: 227.211428571429px; background: rgb(215, 220, 226);"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; opacity: 0.2; z-index: 90; right: 1px; background: rgb(234, 234, 234);"></div></div>
+                            </div>
+                            <div class="task-footer">
+                                <div class="btn-arrow-link pull-right">
+                                    <a href="javascript:;">See All Things that i don't know whats going here yet</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END PORTLET-->
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <!-- BEGIN PORTLET-->
+                    <div class="portlet light">
+                        <div class="portlet-title">
+                            <div class="caption caption-md">
+                                <i class="icon-bar-chart theme-font-color hide"></i>
+                                <span class="caption-subject theme-font-color bold uppercase">Friends Activity</span>
+                                <span class="caption-helper">22 Updates</span>
+                            </div>
+                            <div class="inputs">
+                                <div class="portlet-input input-inline input-small ">
+                             
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                                <div class="scroller" style="height: 305px;" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+                                <div class="general-item-list">
+                                    <div class="item">
+                                        <div class="item-head">
+                                            <div class="item-details">
+                                                <img class="item-pic" src="{{public_path()}}/images/people/real-50/chris.png">
+                                                <a href="" class="item-name primary-link">Chris Morris</a>
+                                                <span class="item-label">3 hrs ago</span>
+                                            </div>
+                                           
+                                        </div>
+                                        <div class="item-body">
+                                             Chris has just recorded his weight and lost 3lbs since the last weigh in!
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item-head">
+                                            <div class="item-details">
+                                                <img class="item-pic" src="{{public_path()}}/images/people/real-50/curt.png">
+                                                <a href="" class="item-name primary-link">Curtis Radford</a>
+                                                <span class="item-label">5 hrs ago</span>
+                                            </div>
+                                           
+                                        </div>
+                                        <div class="item-body">
+                                            Unfortunately, Curtis has made a 2lb gain since last weigh in, for fuck sake Curt.
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item-head">
+                                            <div class="item-details">
+                                                <img class="item-pic" src="{{public_path()}}/images/people/real-50/carl.png">
+                                                <a href="" class="item-name primary-link">Carl Rigby</a>
+                                                <span class="item-label">8 hrs ago</span>
+                                            </div>
+                                           
+                                        </div>
+                                        <div class="item-body">
+                                            Carl Rigby has attended the gym 5 times this week.
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item-head">
+                                            <div class="item-details">
+                                                <img class="item-pic" src="{{public_path()}}/images/people/real-50/curt.png">
+                                                <a href="" class="item-name primary-link">Curtis Radford</a>
+                                                <span class="item-label">12 hrs ago</span>
+                                            </div>
+                                           
+                                        </div>
+                                        <div class="item-body">
+                                            Curtis Radford has just ordered a dominoes, click <a href="lolz">here</a> to send him a hateful message.
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item-head">
+                                            <div class="item-details">
+                                                <img class="item-pic" src="{{public_path()}}/images/people/real-50/chris.png">
+                                                <a href="" class="item-name primary-link">Chris Morris</a>
+                                                <span class="item-label">2 days ago</span>
+                                            </div>
+                                           
+                                        </div>
+                                        <div class="item-body">
+                                            Chris burned 500 calories walking.
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item-head">
+                                            <div class="item-details">
+                                                <img class="item-pic" src="{{public_path()}}/images/people/real-50/carl.png">
+                                                <a href="" class="item-name primary-link">Carl Rigby</a>
+                                                <span class="item-label">3 days ago</span>
+                                            </div>
+                                           
+                                        </div>
+                                        <div class="item-body">
+                                            Carl has just benched 100kg, the beast.
+                                        </div>
+                                    </div>
+                                   
+                            </div><div class="slimScrollBar" style="width: 7px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; height: 163.201754385965px; background: rgb(215, 220, 226);"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; opacity: 0.2; z-index: 90; right: 1px; background: rgb(234, 234, 234);"></div></div>
+                        </div>
+                    </div>
+                    <!-- END PORTLET-->
+                </div>
+            </div>
         
 
 
@@ -531,6 +670,8 @@
         {{ HTML::script('plugins/amcharts/amcharts/themes/chalk.js') }}
         {{ HTML::script('plugins/amcharts/ammap/ammap.js') }}
         {{ HTML::script('plugins/amcharts/ammap/maps/js/worldLow.js') }}
+        {{ HTML::script('pages/scripts/tasks.js') }}
+
 
         @include('includes.footer')
     </footer>
