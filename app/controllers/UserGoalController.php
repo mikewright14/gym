@@ -21,6 +21,24 @@ class UserGoalController extends \BaseController {
 	
 	}
 
+		public function dashboard()
+	{
+
+		$id = Auth::id();
+		$users = User::with('UserStat', 'UserGoal')->find($id);
+
+		// 		$test = User::find($id)->UserGoal()->UserStat()->take(3)->get();
+		// echo "<pre>";
+		
+		
+
+
+
+		
+		return View::make('index')->with('users', $users);
+	
+	}
+
 
 	/**
 	 * Show the form for creating a new resource.

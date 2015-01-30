@@ -18,7 +18,7 @@ class UserStat extends Eloquent implements UserInterface, RemindableInterface {
 	public $timestamps = false;
 
 
-	  public function UserStat()
+	  public function UserUserStat()
     {
         return $this->belongsTo('User');
     }

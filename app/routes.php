@@ -39,8 +39,7 @@
 	
 	Route::group(array('before' => 'auth'), function()
 {
-	
-// User Routes // 
+	Route::get('/', array('as' => 'Dashboard', 'uses' => 'UserGoalController@dashboard'));
 
 
 

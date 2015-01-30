@@ -201,7 +201,7 @@
                                 <table class="table table-hover table-light">
                                 <thead>
                                 <tr class="uppercase">
-                                    <th colspan="2">
+                                    <th>
                                          Goal Name
                                     </th>
                                      <th>
@@ -222,97 +222,92 @@
                                    
                                 </tr>
                                 </thead>
-                                <tr>
-                                    <td class="fit">
-                                        <img class="user-pic" >
-                                    </td>
-                                    <td>
-                                        <a href="javascript:;" class="primary-link">Chicken Legs</a>
-                                    </td>
-                                    <td>
-                                         200g
-                                    </td>
-                                     <td>
-                                         440g
-                                    </td>
-                                    <td>
-                                         45g
-                                    </td>
-                                    <td>
-                                         5g
-                                    </td>
-                                    <td>
-                                       12g
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="fit">
-                                        <img class="user-pic" >
-                                    </td>
-                                    <td>
-                                        <a href="javascript:;" class="primary-link">Chicken Legs</a>
-                                    </td>
-                                    <td>
-                                         200g
-                                    </td>
-                                     <td>
-                                         440g
-                                    </td>
-                                    <td>
-                                         45g
-                                    </td>
-                                    <td>
-                                         5g
-                                    </td>
-                                    <td>
-                                       12g
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="fit">
-                                        <img class="user-pic" >
-                                    </td>
-                                    <td>
-                                        <a href="javascript:;" class="primary-link">Chicken Legs</a>
-                                    </td>
-                                    <td>
-                                         200g
-                                    </td>
-                                     <td>
-                                         440g
-                                    </td>
-                                    <td>
-                                         45g
-                                    </td>
-                                    <td>
-                                         5g
-                                    </td>
-                                    <td>
-                                       12g
-                                    </td>
-                                </tr>
-                                <tr>
-                                   <td class="fit">
-                                        <img class="user-pic" >
-                                    </td>
-                                    <td>
-                                        <a href="javascript:;" class="primary-link">Chicken Legs</a>
-                                    </td>
-                                    <td>
-                                         200g
-                                    </td>
-                                     <td>
-                                         440g
-                                    </td>
-                                    <td>
-                                         45g
-                                    </td>
-                                    <td>
-                                         5g
-                                    </td>
-                                    <td>
-                                       12g
-                                    </td>
+
+                                <?php foreach ($users['UserGoal'] as $user){
+
+
+                            if ($user['goalType'] == 1){
+                            $userEnding = $user['startingValue'] - $user['endingValue'];
+
+                            $userCurrent = $user['startingValue'] - $user['currentValue'];
+
+                            $userPercentage = ($userCurrent / $userEnding) * 100;
+                        }else{
+                            $userEnding =  $user['endingValue'] - $user['startingValue'];
+
+                            $userCurrent =  $user['currentValue'] - $user['startingValue'];
+
+                            $userPercentage = ($userCurrent / $userEnding) * 100;
+
+
+                        }
+
+                         switch($user['goalType'])
+                        {
+                         case "1":
+                         $measurement = "lbs";
+                         $name = "Weight Loss";
+                          break;
+
+                         case "2":
+                         $measurement = "lbs";
+                         $name = "Weight Gain";
+                        break;
+
+                        case "3":
+                        $measurement = "lbs";
+                        $name = "Lifting";
+                        break;
+
+                        case "4":
+                        $measurement = " Miles";
+                        $name = "Running";
+                        break;
+
+                        case "5":
+                        $activityLevel = "Extremely Active";
+                        break;
+                    }
+
+
+
+                           
+
+                            ?>
+
+                            <tr>
+
+                             
+                               
+
+                                <td>   <a href="javascript:;" class="primary-link">{{$user['goalName']}}</a></td>
+
+                                <td>{{$name}}</td>
+
+                                <td>{{$user['startingValue']}}{{$measurement}}</td>
+
+                                <td>{{$user['currentValue']}}{{$measurement}}</td>
+
+                                <td>{{$user['endingValue']}}{{$measurement}}</td>
+
+                                <td>
+
+                                    <div class="progress">
+
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="<?php echo $userPercentage; ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $userPercentage; ?>%;">
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+                                
+                               
+
+                            </tr>
+
+                            <?php } ?>
+
                                 </tr>
                                 </table>
                             </div>
